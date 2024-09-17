@@ -372,6 +372,7 @@ h3 {
 
 .card {
   margin-bottom: 60px;
+  height: auto;
 }
 
 .card .role {
@@ -413,6 +414,33 @@ h3 {
   text-transform: uppercase;
 }
 
+.project-card {
+  height: auto; /* Let the card height adjust automatically based on content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-content {
+  padding: 15px;
+}
+
+.project-description {
+  overflow: visible; /* Allow the description to expand */
+  max-height: none; /* Remove any restrictions on description height */
+  line-height: 1.5; /* Increase line height for readability */
+}
+
+.card-reveal {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
 #experience .card-action {
   background-color: rgba(0, 0, 0, 0.02);
   border: none;
@@ -424,6 +452,13 @@ h3 {
 
 #experience .card .col.s12.m2 a img {
   max-height: 60px;
+}
+
+.role {
+  font-size: 1rem; /* Adjust this size as needed */
+  display: block;
+  margin-top: 0.5rem;
+  color: #795548; /* Adjust color if needed */
 }
 
 .card-action span {
