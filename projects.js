@@ -1,6 +1,7 @@
 const projects = [
     {
       title: "Personal Shopping Site",
+      date: "2024-06-01",
       description: "A personalized cosmetics e-commerce platform using GenAI to deliver tailored product recommendations.",
       image: "/assets/img/project-music-player.png",
       tools: "Python, PHP, HTML, CSS, Bootstrap",
@@ -9,6 +10,7 @@ const projects = [
     },
     {
       title: "Video Game Genre Detection",
+      date: "2023-01-01",
       description: "A video game genre detector built using transfer learning from AlexNet.",
       image: "/assets/img/project-quizup-logo-1.png",
       tools: "Python, PyTorch, TensorFlow",
@@ -17,15 +19,19 @@ const projects = [
     },
     {
       title: "Software Defined Radio",
+      date: "2022-01-01",
       description: "Microcontroller subsystem for a Software-Defined Radio (SDR) transceiver.",
       image: "/assets/img/project-blog-logo.jpg",
       tools: "Python, C/C++, Altium Designer",
       github: "https://github.com/katzyx/SDR-Firmware"
     },
   ];
-  
-  // number of projects displayed
-  let displayed_projects = 0;
+
+
+// Sort the projects array by date (newest first)
+projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+// number of projects displayed
+let displayed_projects = 0;
 
 function project_html(project) {
   return `
