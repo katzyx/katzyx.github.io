@@ -28,7 +28,7 @@ const projects = [
   ];
 
 
-// Sort the projects array by date (newest first)
+// Sort the projects array by date
 projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 // number of projects displayed
 let displayed_projects = 0;
@@ -80,9 +80,10 @@ function display_projects(count) {
   }
 }
 
-// Event listener for "Load More" button
+// Event listener for "Load More" button to load all remaining projects
 document.getElementById('load-more-btn').addEventListener('click', function() {
-    display_projects(1); // Load one more project on each click
+  const remaining_projects = projects.length - displayed_projects;
+  display_projects(remaining_projects); // Load all remaining projects
 });
 
 // Display the most recent project initially
